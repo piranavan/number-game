@@ -17,12 +17,50 @@ public class Game extends BaseEntity {
     @Column
     private int id;
 
+    @Column
+    private Status status;
+
+    @Column
+    private int answer;
+
+    @Column
+    private String winner;
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
+    }
+
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setWinner(String winner) {
+        this.winner = winner;
+    }
+
+    public static enum Status {
+        ACTIVE,
+        COMPLETED
     }
 
 

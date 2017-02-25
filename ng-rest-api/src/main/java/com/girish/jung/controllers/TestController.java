@@ -29,9 +29,8 @@ public class TestController {
 
     @RequestMapping(value="/test", method = RequestMethod.GET)
     public ResponseEntity testAdd() {
-        Game game = new Game();
-        gameService.saveGame(game);
-        return ResponseEntity.ok("Added");
+        Game game = gameService.createNewGame();
+        return ResponseEntity.ok("created");
     }
 
     @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)

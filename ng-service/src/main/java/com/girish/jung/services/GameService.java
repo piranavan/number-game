@@ -7,4 +7,6 @@ import com.girish.jung.model.Game;
  */
 public interface GameService {
     public void saveGame(Game game);
+
+    public Game createNewGame();
 }
