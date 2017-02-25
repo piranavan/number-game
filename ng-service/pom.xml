@@ -64,6 +64,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.girish.jung</groupId>
+            <artifactId>ng-dao</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
