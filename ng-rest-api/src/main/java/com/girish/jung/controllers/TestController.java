@@ -21,8 +21,6 @@ public class TestController {
     @Autowired
     GameService gameService;
 
-    @Autowired
-    Environment environment;
 
     @RequestMapping(value="/status", method = RequestMethod.GET)
     public ResponseEntity getStatus() {
