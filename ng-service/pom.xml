@@ -35,6 +35,11 @@
             <artifactId>commons-io</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+
         <!-- ******************* LOGGER DEPS ************************ -->
         <dependency>
             <groupId>org.slf4j</groupId>

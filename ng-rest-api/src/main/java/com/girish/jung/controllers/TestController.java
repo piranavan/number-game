@@ -7,10 +7,10 @@ import com.girish.jung.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by pkanagaratnam on 25/02/2017.
@@ -34,7 +34,34 @@ public class TestController {
         Game game = new Game();
         gameService.saveGame(game);
         return ResponseEntity.ok("Added");
+    }
 
+    @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
+    public ModelAndView welcomePage() {
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Hello World");
+        model.addObject("message", "This is welcome page!");
+        model.setViewName("hello");
+        return model;
+    }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView adminPage() {
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Hello World");
+        model.addObject("message", "This is protected page - Admin Page!");
+        model.setViewName("login");
+
+        return model;
+    }
+
+    @RequestMapping(value = "/dba", method = RequestMethod.GET)
+    public ModelAndView dbaPage() {
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Hello World");
+        model.addObject("message", "This is protected page - Database Page!");
+        model.setViewName("login");
+
+        return model;
     }
 }

@@ -44,6 +44,9 @@
         <hibernate.version>5.2.5.Final</hibernate.version>
         <mysql.connector.version>5.1.39</mysql.connector.version>
         <joda-time.version>2.3</joda-time.version>
+        <spring.security.version>4.2.1.RELEASE</spring.security.version>
+
+        <jstl.version>1.2</jstl.version>
     </properties>
 
     <dependencyManagement>
@@ -87,6 +90,18 @@
                 <version>3.0.1</version>
             </dependency>
 
+            <dependency>
+                <groupId>jstl</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>1.1.0.Final</version>
+            </dependency>
+
             <!-- ****************** Spring Framework DEPS ****************** -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -117,6 +132,22 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-orm</artifactId>
                 <version>${version.spring}</version>
+                </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <!-- Spring Security JSP Taglib -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-taglibs</artifactId>
+                <version>${spring.security.version}</version>
             </dependency>
 
             <!-- ****************** LOGGER DEPS ************************ -->

@@ -17,6 +17,20 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
+
+        <!-- Project Deps -->
+        <dependency>
+            <groupId>com.girish.jung</groupId>
+            <artifactId>ng-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -94,6 +108,19 @@
             <groupId>com.girish.jung</groupId>
             <artifactId>ng-service</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
+        <!-- Spring Security JSP Taglib -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
         </dependency>
     </dependencies>
 
