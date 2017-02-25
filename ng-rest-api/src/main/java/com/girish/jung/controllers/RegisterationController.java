@@ -2,6 +2,7 @@ package com.girish.jung.controllers;
 
 import com.girish.jung.dto.PlayerDto;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,8 +22,8 @@ public class RegisterationController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView register(PlayerDto playerDto) {
-        System.out.print(playerDto.getFirstName());
+    public ModelAndView register(@ModelAttribute("player") PlayerDto player) {
+        System.out.println(player.getFirstName());
         return null;
     }
 }
