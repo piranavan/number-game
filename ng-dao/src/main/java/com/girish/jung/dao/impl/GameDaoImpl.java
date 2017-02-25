@@ -10,11 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by pkanagaratnam on 25/02/2017.
  */
 @Repository
-@Transactional
-public class GameDaoImpl extends AbstractDao<Game> implements GameDao{
+public class GameDaoImpl extends AbstractDaoImpl<Game> implements GameDao{
 
-    @Override
-    public void saveGame(Game game) {
-        persist(game);
-    }
 }

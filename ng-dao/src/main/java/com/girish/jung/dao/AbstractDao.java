@@ -10,20 +10,8 @@ import java.util.List;
 /**
  * Created by pkanagaratnam on 25/02/2017.
  */
-public class AbstractDao<T> {
-    @Autowired
-    private SessionFactory sessionFactory;
+public interface AbstractDao<T> {
+    public void persist(T entity);
 
-    protected Session getSession() {
-        return sessionFactory.getCurrentSession();
-    }
-
-    public void persist(T entity) {
-        getSession().persist(entity);
-    }
-
-    public void delete(T entity) {
-        getSession().delete(entity);
-    }
-
+    public void delete(T entity);
 }

@@ -3,6 +3,7 @@ package com.girish.jung.controllers;
 import com.girish.jung.dao.GameDao;
 import com.girish.jung.dao.impl.GameDaoImpl;
 import com.girish.jung.model.Game;
+import com.girish.jung.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    GameDao gameDao;
+    GameService gameService;
 
     @Autowired
     Environment environment;
@@ -31,8 +32,7 @@ public class TestController {
     @RequestMapping(value="/test", method = RequestMethod.GET)
     public ResponseEntity testAdd() {
         Game game = new Game();
-        gameDao.saveGame(game);
-        System.out.println("Max property: " + environment.getProperty("connection.pool.max.size"));
+        gameService.saveGame(game);
         return ResponseEntity.ok("Added");
 
 

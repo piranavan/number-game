@@ -7,8 +7,7 @@ import java.util.List;
 /**
  * Created by pkanagaratnam on 25/02/2017.
  */
-public interface GameDao {
+public interface GameDao extends AbstractDao<Game> {
 
-    public void saveGame(Game game);
 
 }
