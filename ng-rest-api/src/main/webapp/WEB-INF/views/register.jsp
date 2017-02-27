@@ -19,6 +19,7 @@
             <tr>
                 <td><label>Password:</label></td> <td><form:input path="password"/></td>
             </tr>
+            <form:hidden path="playerType" value="HUMAN"/>
         </table>
         <form:button type="submit">Register</form:button>
     </form:form>

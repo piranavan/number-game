@@ -5,7 +5,7 @@ import com.girish.jung.model.Game;
 import java.util.List;
 
 /**
- * Created by pkanagaratnam on 25/02/2017.
+ * Created by girishjung on 25/02/2017.
  */
 public interface GameDao extends AbstractDao<Game> {
 

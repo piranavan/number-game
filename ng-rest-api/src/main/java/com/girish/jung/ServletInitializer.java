@@ -8,7 +8,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 /**
- * Created by pkanagaratnam on 25/02/2017.
+ * Created by girishjung on 25/02/2017.
  */
 public class ServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

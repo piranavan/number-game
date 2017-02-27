@@ -10,22 +10,22 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Player")
-public class Player {
+public class Player extends BaseEntity {
 
     public static enum PlayerType {
         HUMAN, MACHINE;
     }
 
-    @Column
+    @Column(name="FIRST_NAME")
     private String firstName;
 
-    @Column
+    @Column(name="LAST_NAME")
     private String lastName;
 
     @Column
     private String password;
 
-    @Column
+    @Column(name="PLAYER_TYPE")
     private PlayerType playerType;
 
     public String getFirstName() {

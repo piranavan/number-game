@@ -1,21 +1,31 @@
 package com.girish.jung.model;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.persistence.*;
 import java.time.Instant;
 
 /**
- * Created by pkanagaratnam on 25/02/2017.
+ * Created by girishjung on 25/02/2017.
  */
 @MappedSuperclass
 public class BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     @Column(name="CREATED_AT")
     private Instant createdAt;
 
     @Column(name="UPDATED_AT")
     private Instant updatedAt;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Instant getCreatedAt() {
         return createdAt;

@@ -11,6 +11,8 @@ public class PlayerDto {
         HUMAN, MACHINE;
     }
 
+    private int id;
+
     @NotNull
     private String firstName;
 
@@ -22,6 +24,14 @@ public class PlayerDto {
 
     @NotNull
     private PlayerType playerType;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;

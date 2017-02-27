@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * Created by pkanagaratnam on 25/02/2017.
+ * Created by girishjung on 25/02/2017.
  */
 public interface AbstractDao<T> {
+
+    public Integer save(T entity);
+
     public void persist(T entity);
 
     public void delete(T entity);

@@ -6,16 +6,12 @@ import com.sun.xml.internal.rngom.parse.host.Base;
 import javax.persistence.*;
 
 /**
- * Created by pkanagaratnam on 25/02/2017.
+ * Created by girishjung on 25/02/2017.
  */
 @Entity
 @EntityListeners({TimestampEntityListener.class})
 @Table(name="GAME")
 public class Game extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private int id;
 
     @Column
     private Status status;
@@ -25,14 +21,6 @@ public class Game extends BaseEntity {
 
     @Column
     private String winner;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Status getStatus() {
         return status;
@@ -62,6 +50,5 @@ public class Game extends BaseEntity {
         ACTIVE,
         COMPLETED
     }
-
 
 }
