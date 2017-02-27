@@ -1,4 +1,4 @@
-package com.girish.jung;
+package com.girish.jung.config;
 
 import com.girish.jung.config.SecurityConfig;
 import com.girish.jung.dao.DaoAppConfig;

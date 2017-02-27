@@ -1,11 +1,6 @@
-package com.girish.jung;
+package com.girish.jung.config;
 
-import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import javax.servlet.Filter;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 
 /**
  * Created by girishjung on 25/02/2017.
